@@ -88,3 +88,4 @@ function barajaTarjetas(lasTarjetas) {
     return resultado;
 }
 
+console.log("%c//G.E.M.A//","color:orange; font-size: x-large; font-weight:bold; background-color:gray;, padding:20px;");

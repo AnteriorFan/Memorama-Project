@@ -110,6 +110,7 @@ body{
   padding: 0 60px 0 60px;
   border-radius: 25px;
   box-shadow: 2px 2px 6px rgb(185 185 185 / 40%), 4px 4px 10px rgb(81 81 81 / 90%);
+  cursor: none;
 }
 
 .cabecera-titulo{
@@ -288,6 +289,7 @@ button {
   border-radius: 5rem;
   color: white;
   font-weight: 600;
+  border: 1px;
   line-height: 1;
   transition: 0.3s;
 }
@@ -378,76 +380,18 @@ button:focus {
 
 @media screen and  (max-width: 395px){
 
-  .contadores{
-    display: contents;
+  .bienvenida h1 {
+    font-size: 40px;
   }
 
-  .contadores-item{
-    background: #3b3b3bfc;
-    color: #ffffff;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 20px;
-    font-variant: ordinal;
-    letter-spacing: 2px;
-    padding: 0;
-    margin: 11px;
-    border-radius: 25px;
-    box-shadow: 4px 4px 8px rgb(0 0 0 / 30%), 6px 6px 10px rgb(106 105 105 / 90%);
-  }
-  .cabecera-num{
-    font-weight: 500;
+  .bienvenida-botones {
+    flex-direction: column;
   }
 
-
-  .mesa{
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    margin: auto;
-    max-width: 18rem;
+  .bienvenida button {
+    margin: 1rem 1rem;
+    min-width: 15rem;
   }
-
-
-.feedback,
-.sube-nivel,
-.game-over,
-.end-game {
-  display: none; 
-  position: absolute;
-  top: 220px;
-  bottom: 1px;
-  left: 25px;
-  right: 30px;
-  box-shadow: 6px 6px 12px rgb(47 46 46 / 12%), 6px 8px 12px rgb(132 124 124 / 90%);
-  background-image: var(--gradient);
-}
-
-
-.modal {
-  background: #2a2a2a;
-  padding: 1.5rem 1.5rem 1.5rem;
-  margin: 130px 30px 135px 25px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 20px;
-  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), 8px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-  
-}
-
-@media screen and (min-width: 400px)  and (max-width: 490px){
-  body{
-
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-}
 
   .cabecera{
     display: contents;
@@ -456,20 +400,12 @@ button:focus {
   
   .contadores{
     display: contents;
-    /* margin: 0 200px 10px  155px  */
+    margin: 0 200px ; 
   }
   .contadores-item{
-    background: #3b3b3bfc;
-    color: #ffffff;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: x-large;
-    font-variant: ordinal;
-    letter-spacing: 2px;
-    padding: 0 20px 10px 20px;
-    margin: 10px;
-    border-radius: 25px;
-    box-shadow: 2px 2px 6px rgb(0 0 0 / 12%), 4px 4px 10px rgb(81 81 81 / 90%);
+    font-size: 20px;
+    margin: 0 20px 5px 20px;
+    padding: 0 20px 5px 20px;
   }
   .contadores-item h4{
     margin: 10px 10px 10px 10px;
@@ -477,7 +413,125 @@ button:focus {
   .cabecera-num{
     font-weight: 500;
   }
+  .nivel{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    padding: 0 20px 0 20px;
+    margin: 0 50px 10px 50px;
+  }
 
+  .regret {
+    font-size: 40px;
+    bottom: 164px;
+    right: 300px;
+  }
+
+  .control-nivel {
+    font-size: 20px;
+    top: 1.2rem;
+    right: 30px;
+    background: #c97e66;
+    border: 1px;
+  }
+  .selecciona-nivel {
+    position: fixed;
+    display: flex;
+
+    justify-content: center;
+  }
+  .selecciona-nivel li {
+    margin-bottom: 0.3rem;
+    text-align: center;
+  }
+
+  .selecciona-nivel button {
+    padding: 5px 10px 5px 10px;
+    margin: 15px 15px 10px 0;
+
+}
+
+  .mesa{
+    margin: auto;
+    max-width: 19.3rem;
+  }
+  
+
+  .sube-nivel,
+  .game-over,
+  .end-game {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+    border: 1px;
+  }
+
+
+  .modal {
+    padding: 1.5rem 1.5rem 1.5rem;
+    margin: auto;
+    display: flex;
+  }
+  
+}
+
+@media screen and (min-width: 400px)  and (max-width: 490px){
+
+  .bienvenida h1 {
+    font-size: 40px;
+  }
+
+  .bienvenida-botones {
+    flex-direction: column;
+  }
+
+  .bienvenida button {
+    margin: 1rem 1rem;
+    min-width: 15rem;
+  }
+
+  .cabecera{
+    display: contents;
+    position: relative;
+  }
+  
+  .contadores{
+    display: contents;
+    margin: 0 200px ; 
+  }
+  .contadores-item{
+    font-size: 25px;
+    margin: 20px;
+  }
+  .contadores-item h4{
+    margin: 10px 10px 10px 10px;
+  }
+  .cabecera-num{
+    font-weight: 500;
+  }
+  .nivel{
+    font-size: 25px;
+    letter-spacing: 4px;
+    padding: 0 20px 0 20px;
+    margin: 10px 50px 10px 50px;
+  }
+
+  .regret {
+    font-size: 45px;
+    bottom: 164px;
+    right: 312px;
+    height: 2rem;
+}
+
+  .control-nivel {
+    font-size: 20px;
+    top: 1.2rem;
+    right: 30px;
+    background: #c97e66;
+    border: 1px;
+  }
 
   .mesa{
     display: flex;
@@ -487,40 +541,56 @@ button:focus {
     margin: auto;
   }
   
-  .feedback,
-.sube-nivel,
-.game-over,
-.end-game {
-      display: none; 
-  position: absolute;
-  top: 89px;
-  bottom: -326px;
-  left: 348px;
-  /* right: 111px; */
-  right: 354px;
-  box-shadow: 6px 6px 12px rgb(47 46 46 / 12%), 6px 8px 12px rgb(132 124 124 / 90%);
-  background-image: var(--gradient);
-}
+
+  .sube-nivel,
+  .game-over,
+  .end-game {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+    border: 1px;
+  }
 
 
-.modal {
-  background: #2a2a2a;
-  padding: 1.5rem 1.5rem 1.5rem;
-  margin: 138px 30px 120px 40px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 20px;
-  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), 8px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-
+  .modal {
+    padding: 1.5rem 1.5rem 1.5rem;
+    margin: auto;
+    display: flex;
+  }
 
 }
 
 @media screen and  (min-width: 500px)  and (max-width: 1024px){
 
+  .cabecera {
+    margin: 19px 25px 25px 25px;
+  }
+  .regret {
+    font-size: 50px;
+    top: 0;
+    right: 40rem;
+  }
+  .contadores-item {
+  margin-left: 15px;
+  }
+  .control-nivel {
+    font-size: 1.5rem;
+    top: 1.2rem;
+    padding: 5px;
+    width: 3rem;
+    height: 2rem;
+  }
+
+  .sube-nivel, .game-over, .end-game {
+
+    top: 89px;
+    bottom: -338px;
+    left: 155px;
+    right: 155px;
+    border-radius: 50px;
+    
+  }
 
 }

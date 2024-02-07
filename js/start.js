@@ -27,6 +27,7 @@ function timeOver(){
 }
 
 function iniciar(){
+
     move = 0;
     reparteTarjeta(niveles[nivelActual].tarjetas);
     document.querySelector("#mov").innerText = "00";
@@ -49,6 +50,11 @@ function iniciar(){
     }else{
         document.querySelector("#cronometro").classList.add("cronometro-oculto");
     }
+
+}
+
+function conSol(){
+    console.log("%c//G.E.M.A//","color:black; font-size: x-large; font-weight:bold; background-color:white;, padding:20px;");
 }
 
 function reset(){
@@ -62,6 +68,7 @@ function iniciaJuegoNormal(){
     modoRelax = false;
     document.querySelector("#bienvenida").classList.remove("visible");
     iniciar();
+    conSol();
     document.querySelector(".control-nivel").classList.add("control-oculto");
 }
 
@@ -69,4 +76,5 @@ function iniciaJuegoRelax(){
     modoRelax = true;
     document.querySelector("#bienvenida").classList.remove("visible");
     iniciar();
+    conSol();
 }
